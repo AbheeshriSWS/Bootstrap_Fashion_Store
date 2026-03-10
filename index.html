@@ -6,44 +6,71 @@
     <title>Fashion Store Bootstrap Template Demo</title>
     <link href="assets/images/favicon.png" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="container">
-        <div class="d-flex justify-content-between mt-1 flex-wrap">
+        <div class="d-flex justify-content-between mt-1 flex-wrap padding-t-4">
             <div class="d-flex align-items-center gap-4 flex-wrap">
-                <small class="text-dark"> 
+                <small class="text-dark d-flex justify-content-between align-items-center gap-2"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Customer Support: <span class="text-danger">+1 (234) 567-890</span>
+                    <span>Customer Support: <span class="default-color">+1 (234) 567-890</span></span>
                 </small>
-                <a href="javascript:void(0)" class="text-muted text-decoration-none d-block">
+                <a href="javascript:void(0)" class="text-muted text-decoration-none d-flex align-items-center justify-content-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <small class="text-danger">support@example.com</small>
+                    <small class="default-color">support@example.com</small>
                 </a>
             </div>  
-            <div class="d-flex align-items-center gap-4 flex-wrap">
-                <a href="javascript:void(0)" class="text-danger text-decoration-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div class="d-flex align-items-center flex-wrap gap-4">
+                <a href="javascript:void(0)" class="default-color text-decoration-none d-flex justify-content-center align-items-center gap-0_5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                     <small>Track Order</small>
                 </a>
-                <a href="javascript:void(0)" class="text-danger text-decoration-none">
+                <!-- <a href="javascript:void(0)" class="default-color text-decoration-none d-flex justify-content-center align-items-center gap-0_5 position-relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     <small>English</small>
-                </a>
-                <a href="javascript:void(0)" class="text-danger text-decoration-none">
+                </a> -->
+                <div class="dropdown default-color text-decoration-none d-flex justify-content-center align-items-center gap-0_5 position-relative">
+                    <button type="button" class="btn dropdown-toggle p-0 m-0 font-14 border-0 default-color" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    English
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Español</a></li>
+                    <li><a class="dropdown-item" href="#">Français</a></li>
+                    <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                    </ul>
+                </div>
+                <!-- <a href="javascript:void(0)" class="default-color text-decoration-none d-flex justify-content-center align-items-center gap-0_5 position-relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     <small>USD</small>
-                </a>
+                </a> -->
+                <div class="dropdown default-color text-decoration-none d-flex justify-content-center align-items-center gap-0_5 position-relative">
+                    <button type="button" class="btn dropdown-toggle p-0 m-0 font-14 border-0 default-color" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        USD
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">USD</a></li>
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">GBP</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <nav class="d-flex justify-content-between my-3 align-items-center w-100 flex-wrap">
             <div>
-                <h4><a href="javacscript:void(0)" class="text-decoration-none text-dark">Fashion<span class="text-danger">Store</span></a></h4>
+                <h1><a href="javacscript:void(0)" class="text-decoration-none font-26 heading-color font-quick font-700">Fashion<span class="default-color">Store</span></a></h1>
             </div>
-            <form>
-                <div class="input-group input-group-lg w-100">
-                    <input type="text" placeholder="Search for products..." class="form-control p-2 rounded-start-3 border-1" name="search">
-                    <button class="btn btn-danger d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <form class="mx-3 flex-grow-1">
+                <div class="input-group input-group-lg custom-input-grp">
+                    <input type="text" placeholder="Search for products..." class="form-control rounded-start-3 custom-input" name="search">
+                    <button class="btn d-flex align-items-center justify-content-center search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </button>
                 </div>
             </form>
@@ -55,11 +82,11 @@
                     </a></li>
                     <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none text-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                        <small>Wishlist</small>
+                        <small class="position-relative count-bg">Wishlist <span class="text-light count">0</span></small>
                     </a></li>
                     <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none text-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                        <small>Cart</small>
+                        <small class="position-relative count-bg">Cart <span class="text-light count">3</span></small>
                     </a></li>
                 </ul>
             </div>
