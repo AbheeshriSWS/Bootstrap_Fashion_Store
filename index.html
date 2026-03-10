@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <nav class="d-flex justify-content-between my-3 align-items-center w-100 flex-wrap">
+        <nav class="d-flex justify-content-between my-3 align-items-center w-100 flex-wrap padding-t-6">
             <div>
                 <h1><a href="javacscript:void(0)" class="text-decoration-none font-26 heading-color font-quick font-700">Fashion<span class="default-color">Store</span></a></h1>
             </div>
@@ -75,61 +75,93 @@
                 </div>
             </form>
             <div class="navbar navbar-expand-sm">
-                <ul class="navbar-nav gap-4">
-                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none text-dark">
+                <ul class="navbar-nav gap-2_5">
+                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none body-color">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                        <small>Account</small>
+                        <small class="font-500">Account</small>
                     </a></li>
-                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none text-dark">
+                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none body-color">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                        <small class="position-relative count-bg">Wishlist <span class="text-light count">0</span></small>
+                        <small class="position-relative font-500">Wishlist <span class="text-light count">0</span></small>
                     </a></li>
-                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none text-dark">
+                    <li class="navbar-item"><a href="javascript:void(0)" class="navbar-link text-decoration-none body-color">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                        <small class="position-relative count-bg">Cart <span class="text-light count">3</span></small>
+                        <small class="position-relative font-500">Cart <span class="text-light count">3</span></small>
                     </a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <hr>
+    <hr class="header-hr">
     <main>
-        <section class="navbar navbar-expand-sm">
-            <div class="container">
+        <section class="navbar navbar-expand-sm pt-0 pb-3">
+            <div class="container px-4">
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav gap-3 flex-wrap">
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Home</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">About</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Category</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Product Details</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Cart</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Checkout</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Dropdown</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Megamenu1</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Megamenu2</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link text-dark">Contact</a></li>
+                    <ul class="navbar-nav gap-2rem flex-wrap nav-menu">
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Category</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Product Details</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cart</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Checkout</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link">Dropdown
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                            </a>
+
+                            <div class="dropdown-content">
+                                <a href="#">Dropdown 1</a>
+
+                                <!-- Deep Dropdown -->
+                                <div class="dropdown-submenu">
+                                    <a href="javascript:void(0)">Deep Dropdown
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                                    </a>
+
+                                    <div class="submenu">
+                                        <a href="javascript:void(0)">Deep Dropdown 1</a>
+                                        <a href="javascript:void(0)">Deep Dropdown 2</a>
+                                        <a href="javascript:void(0)">Deep Dropdown 3</a>
+                                        <a href="javascript:void(0)">Deep Dropdown 4</a>
+                                        <a href="javascript:void(0)">Deep Dropdown 5</a>
+                                    </div>
+                                </div>
+
+                                <a href="#">Dropdown 2</a>
+                                <a href="#">Dropdown 3</a>
+                                <a href="#">Dropdown 4</a>
+                                <a href="#">Dropdown 5</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Megamenu1
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                        </a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Megamenu2
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                        </a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </section>
         <div class="container-fluid p-0">
-            <div class="bg-danger text-center text-light py-2">
+            <div class="bg-default text-center text-light py-2 ann-bar">
                 <b>⚡ Flash Sale! Up to 70% off on selected items</b>
             </div>
         </div>
-        <section class="container my-5">
+        <section class="container">
             <div id="hero" class="carousel slide carousel-dark" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row d-flex align-items-center">
                             <div class="col-sm-6">
-                                <b class="bg-secondary rounded-5 p-2 text-danger d-inline-block">Featured Collection</b>
-                                <h1 class="my-3"><b>Season Sale Up to 50% Off</b></h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos, soluta sed quaerat, saepe architecto assumenda dicta aperiam unde excepturi rem minus deserunt magnam cumque id nam consequuntur quisquam illo!</p>
-                                <button type="button" class="btn bg-danger">Shop Sale -></button>
+                                <b class="bg-pink rounded-5 text-danger d-inline-block">Featured Collection</b>
+                                <h1 class="hero-head">Season Sale Up to 50% Off</h1>
+                                <p class="hero-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos, soluta sed quaerat, saepe architecto assumenda dicta aperiam unde excepturi rem minus deserunt magnam cumque id nam consequuntur quisquam illo!</p>
+                                <button type="button" class="btn bg-default">Shop Sale -></button>
                             </div>
                             <div class="col-sm-6">
                                 <!-- <div class="bg-danger rounded-5 d-inline-block p-2 text-right">
@@ -142,9 +174,9 @@
                     <div class="carousel-item">
                         <div class="row d-flex align-items-center">
                             <div class="col-sm-6">
-                                <b class="bg-secondary rounded-5 p-2 text-danger d-inline-block">Featured Collection</b>
-                                <h1 class="my-3"><b>Premium Quality Products</b></h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos, soluta sed quaerat, saepe architecto assumenda dicta aperiam unde excepturi rem minus deserunt magnam cumque id nam consequuntur quisquam illo!</p>
+                                <b class="bg-pink rounded-5 text-danger d-inline-block">Featured Collection</b>
+                                <h1 class="hero-head">Premium Quality Products</h1>
+                                <p class="hero-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos, soluta sed quaerat, saepe architecto assumenda dicta aperiam unde excepturi rem minus deserunt magnam cumque id nam consequuntur quisquam illo!</p>
                                 <button type="button" class="btn bg-danger">Shop Sale -></button>
                             </div>
                             <div class="col-sm-6">
