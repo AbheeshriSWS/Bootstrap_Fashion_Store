@@ -49,6 +49,10 @@ body{
     font-size: 26px;
 }
 
+.font-13{
+    font-size: 13px;
+}
+
 .heading-color{
     color: var(--heading-color);
 }
@@ -184,7 +188,7 @@ body{
 }
 
 /* drodown-end */   
-.nav-menu li a{
+.nav-menu > li > a{
     position: relative;
     padding-inline: 0 !important;
     font-size: 15px;
@@ -193,7 +197,7 @@ body{
     padding-bottom: 5px !important;
 }
 
-.nav-menu li a::after{
+.nav-menu > li > a::after{
     position: absolute;
     content: "";
     height: 2px;
@@ -206,11 +210,11 @@ body{
     transition: transform 0.4s ease;
 }
 
-.nav-menu li a:hover{
+.nav-menu > li > a:hover{
     color: var(--default-color);
 }
 
-.nav-menu li a:hover::after{
+.nav-menu > li > a:hover::after{
     transform: scaleX(1);
     color: #fff;
 }
@@ -224,7 +228,7 @@ body{
 }
 
 .bg-default{
-    background-color: var(--default-color);
+    background-color: var(--default-color) !important;
 }
 
 .bg-pink{
@@ -266,21 +270,14 @@ body{
     color: #666;
 }
 
-.promo-card1, .promo-card2, .promo-card3, .promo-card4, .shop-effect{
-    position: relative;
-    transition: transform 0.5s;
-}
-
 .promo-card1:hover, .promo-card2:hover, .promo-card3:hover, .promo-card4:hover{
     transform: translate(0, -5px);
 }
 
-.shop-effect:hover{
-    overflow: hidden;
-}
 
-.shop-effect img:hover{
-    transform: scale(1.01);
+.promo-card1, .promo-card2, .promo-card3, .promo-card4{
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .promo-card1{
@@ -358,4 +355,156 @@ body{
     height: 2px;
     background: var(--heading-color);
     z-index: 1;
+}
+
+.shop-text {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-effect{
+    transition: all 0.3s ease 0.2s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.shop-effect img{
+    transition: transform 0.5s ease 0.2s;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.shop-effect:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shop-effect:hover img{
+    transform: scale(1.05);
+}
+
+.shop-effect:hover .shop-text{
+    background-color: var(--default-color);
+    color: #ffffff;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+}
+
+.font-18{
+    font-size: 18px;
+}
+
+.card-price{
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--default-color);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.rating-num{
+    color: color-mix(in srgb, var(--body-color), transparent 40%);
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.bg-tab{
+    background-color: color-mix(in srgb, var(--body-color), transparent 95%);
+}
+
+.product-tab .nav-link.active{
+    background-color: var(--default-color) !important;
+    color: #fff;
+}
+
+.product-tab .nav-link{
+    border: none;
+    outline: none;
+    color: var(--body-color);
+}
+
+.product-tab .nav-link:not(.active):hover{
+    outline: none;
+    border: none;
+    color: var(--default-color);
+    background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer-head{
+    color: var(--heading-color);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.footer-head + p{
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--body-color), transparent 20%);
+    font-size: 14px;
+}
+
+.connect{
+    color: color-mix(in srgb, var(--body-color), transparent 20%);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bg-social{
+    background-color: color-mix(in srgb, var(--body-color), transparent 90%);
+}
+
+.footer-sub-head{
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    color: var(--heading-color);
+    padding-bottom: 12px;
+}
+
+.footer-sub-head::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color: var(--heading-color);
+    bottom: 0;
+    left: 0;
+}
+
+.footer-sub-head ~ .navbar .nav-link{
+    color: color-mix(in srgb, var(--body-color), transparent 30%);
+    font-size: 14px;
+}
+
+.bg-app{
+    background-color: color-mix(in srgb, var(--body-color), transparent 90%);
+    font-size: 13px;
+    color: var(--body-color);
+    font-weight: 500;
+}
+
+.bg-app:hover{
+    background-color: var(--default-color);
+    color: #fff;
+}
+
+.footer-color{
+    color: color-mix(in srgb, var(--body-color), transparent 30%);
 }
