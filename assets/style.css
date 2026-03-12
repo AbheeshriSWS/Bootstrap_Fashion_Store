@@ -508,3 +508,42 @@ body{
 .footer-color{
     color: color-mix(in srgb, var(--body-color), transparent 30%);
 }
+
+/* image-hover-change-effect */
+
+.product-card-inner{
+    width: 287px;
+    height: 358px;
+}
+
+.img-box{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.img-box img{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+
+.img-hover{
+    opacity:0;
+    z-index: 2;
+}
+
+.product-cardd:hover .img-default{
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.product-cardd:hover .img-hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
