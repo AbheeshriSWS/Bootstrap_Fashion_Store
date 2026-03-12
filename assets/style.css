@@ -509,7 +509,7 @@ body{
     color: color-mix(in srgb, var(--body-color), transparent 30%);
 }
 
-/* image-hover-change-effect */
+/* image-hover-change-effect product-list-one*/
 
 .product-card-inner{
     width: 287px;
@@ -546,4 +546,109 @@ body{
 .product-cardd:hover .img-hover{
     opacity: 1;
     transform: scale(1.05);
+}
+
+/* image-hover-change-effect product-list-two*/
+
+.cart-product{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cart-product:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cart-product-box{
+    position: relative;
+}
+
+.cart-product-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transform: scale(1.05);
+    z-index: 2;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.cart-product-inner{
+    width: 261px;
+    height: 261px;
+    position: relative;
+}
+
+.cart-product-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cart-img-default, .cart-img-hover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.cart-img-hover{
+    opacity: 0;
+    z-index: 2;
+}
+
+.cart-product:hover .cart-img-default{
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.cart-product:hover .cart-img-hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.cart-product:hover .cart-product-overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.product-btn-cart {
+    text-align: center;
+    color: #fff;
+    background-color: var(--default-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px 0px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.action-btn {
+    background-color: #fff;
+    padding: 7px 15px;
+    border-radius: 50%;
+}
+
+.action-btn a{
+    text-decoration: none;
+    color: var(--body-color);
+    font-size: 14px;
 }
