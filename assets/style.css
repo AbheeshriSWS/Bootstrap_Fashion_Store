@@ -140,6 +140,7 @@ body{
 .nav-item.dropdown{
   position: relative;
 }
+
 .dropdown-content{
   display: none;
   position: absolute;
@@ -165,7 +166,6 @@ body{
 
 .nav-item.dropdown:hover > .dropdown-content{
   display: block;
-  padding-inline: 25px;
 }
 
 .dropdown-submenu{
@@ -184,10 +184,29 @@ body{
 
 .dropdown-submenu:hover > .submenu{
   display: block;
-  padding-inline: 25px;
 }
 
-/* drodown-end */   
+/* drodown-end */ 
+
+/* megamenu1 */
+
+
+.megamenu1-content{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  max-width: 1140px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.nav-item.dropdown:hover > .megamenu1-content{
+  display: block;
+}
+
+
 .nav-menu > li > a{
     position: relative;
     padding-inline: 0 !important;
