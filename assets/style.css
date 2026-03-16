@@ -130,6 +130,10 @@ body{
     padding-top: 6px;
 }
 
+.padding-t-10{
+    padding-top: 10px;
+}
+
 .header-hr{
     background-color: #2125296A;
     border: 0;
@@ -158,10 +162,11 @@ body{
   text-decoration: none;
   color: #000;
   white-space: nowrap;
+  transition: 0.2s ease-in-out;
 }
 
-.dropdown-content a:hover{
-  background-color: #ddd;
+.dropdown-content a:hover {
+    color: var(--default-color);
 }
 
 .nav-item.dropdown:hover > .dropdown-content{
@@ -188,21 +193,38 @@ body{
 
 /* drodown-end */ 
 
-/* megamenu1 */
+/* megamenu */
 
 
-.megamenu1-content{
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f9f9f9;
-  max-width: 1140px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 999;
+.megamenu1-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50vw;
+    background-color: #f9f9f9;
+    width: 80vw;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
 }
 
-.nav-item.dropdown:hover > .megamenu1-content{
+.megamenu2-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -60vw;
+    background-color: #f9f9f9;
+    width: 80vw;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.megamenu-ul li a {
+    color: var(--body-color);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.nav-item.dropdown:hover > .megamenu1-content, .nav-item.dropdown:hover > .megamenu2-content{
   display: block;
 }
 
@@ -255,6 +277,7 @@ body{
     font-size: 0.875rem;
     font-weight: 600;
     padding: 0.5rem 1rem !important;
+    color: var(--default-color);
 }
 
 .hero-head{
@@ -280,6 +303,7 @@ body{
     max-width: 150px;
     width: 100%;
     font-family: "Roboto", sans-serif;
+    padding-block: 12px;
 }
 
 .promo-small-text{
@@ -489,12 +513,14 @@ body{
     background-color: color-mix(in srgb, var(--body-color), transparent 90%);
     transition: transform 0.2s ease;
     line-height: 1;
+    color: var(--body-color);
 }
 
 .bg-social:hover {
     background-color: var(--default-color);
     transform: translateY(-3px);
     transition: transform 0.2s ease;
+    color: #fff;
 }
 
 .footer-sub-head{
@@ -534,6 +560,7 @@ body{
 
 .footer-color{
     color: color-mix(in srgb, var(--body-color), transparent 30%);
+    transition: 0.05s ease-in-out;
 }
 
 /* image-hover-change-effect product-list-one*/
@@ -565,6 +592,10 @@ body{
     z-index: 2;
 }
 
+.product-cardd{
+    position: relative;
+}
+
 .product-cardd:hover .img-default{
     opacity: 0;
     transform: scale(1.1);
@@ -575,10 +606,33 @@ body{
     transform: scale(1.05);
 }
 
+.product-cardd:hover .quick-view{
+    opacity: 1;
+}
+
+.quick-view {
+    position: absolute;
+    display: grid;
+    right: 5%;
+    top: 35%;
+    z-index: 2;
+    gap: 10px;
+    opacity: 0;
+}
+
+.quick-view a{
+    color: var(--default-color);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
 /* image-hover-change-effect product-list-two*/
 
 .cart-product{
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .cart-product:hover{
@@ -666,18 +720,35 @@ body{
     padding: 10px 0px;
     font-size: 14px;
     margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.product-btn-cart:hover {
+    background-color: color-mix(in srgb, var(--default-color), #000 10%) !important;
+    transform: translateY(-3px);
 }
 
 .action-btn {
     background-color: #fff;
     padding: 7px 15px;
     border-radius: 50%;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
-.action-btn a{
-    text-decoration: none;
+.action-btn span{
     color: var(--body-color);
     font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+
+.action-btn:hover{
+    transform: translateY(-3px);
+}
+
+.action-btn:hover span{
+    color: var(--default-color);
 }
 
 .padding-12{
@@ -686,4 +757,137 @@ body{
 
 .hover-default ul li a:hover{
     color: var(--default-color) !important;
+}
+
+.nav-1 a:hover, .lang-dol:hover{
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.search-btn:hover {
+    background-color: var(--default-color);
+}
+
+.wish-parent li a:hover {
+    color: var(--default-color);
+}
+
+.cstm-button:hover{
+    background-color: color-mix(in srgb, var(--default-color), #000 10%) !important;
+}
+
+.hero-img-section{
+    position: relative;
+}
+
+.hero-img-badge {
+    position: absolute;
+    background-color: var(--default-color);
+    right: 4%;
+    top: 12%;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.hero-img-badge h6 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+.hero-img-badge p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-head span{
+    color: var(--default-color);
+    position: relative;
+    display: inline-block;
+}
+
+.hero-head span::after {
+    content: "";
+    position: absolute;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 6px;
+}   
+
+.view-all-btn {
+    aspect-ratio: 213 / 48;
+    max-width: 213px;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    padding-block: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto 50px auto;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.view-all-btn:hover{
+    background-color: color-mix(in srgb, var(--default-color), #000 10%) !important;
+}
+
+footer {
+    background-color: #f8f4f6;
+}
+
+hr{
+    margin: 0;
+}   
+
+.footer-color:hover {
+    color: var(--default-color);
+}
+
+.new-badge {
+    display: inline-block;
+    background: var(--default-color);
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.best-badge {
+    display: inline-block;
+    background: var(--default-color);
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.scroll-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+    background-color: var(--default-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.scroll-top:hover {
+    background-color: color-mix(in srgb, var(--default-color), transparent 20%);
+    color: #fff;
 }
