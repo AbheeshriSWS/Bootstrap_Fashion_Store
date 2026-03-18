@@ -23,7 +23,7 @@ body{
 }
 
 .padding-t-4{
-    padding-top: 4px;
+    padding-block: 8px;
 }
 
 .gap-0_5{
@@ -126,8 +126,8 @@ body{
     font-weight: 500;
 }
 
-.padding-t-6{
-    padding-top: 6px;
+.margin-t-15{
+    margin-top: 15px;
 }
 
 .padding-t-10{
@@ -249,6 +249,7 @@ body{
     transition: transform 2s;
     color: var(--body-color);
     padding-bottom: 5px !important;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .nav-menu > li:not(:first-child) > a::after{
@@ -551,9 +552,9 @@ body{
 .footer-sub-head::after {
     content: "";
     position: absolute;
-    height: 2px;
+    height: 3px;
     width: 40px;
-    background-color: var(--heading-color);
+    background-color: var(--default-color);
     bottom: 0;
     left: 0;
 }
@@ -835,9 +836,9 @@ body{
     position: absolute;
     background-color: color-mix(in srgb, var(--default-color), transparent 85%);
     width: 100%;
-    height: 5px;
+    height: 8px;
     left: 0;
-    bottom: 6px;
+    bottom: 4px;
 }   
 
 .view-all-btn {
@@ -856,6 +857,14 @@ body{
 
 .view-all-btn:hover{
     background-color: color-mix(in srgb, var(--default-color), #000 10%) !important;
+}
+
+.view-all-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover svg {
+  transform: translateX(5px);
 }
 
 footer {
@@ -1074,7 +1083,8 @@ hr{
 }
 
 .overflow-custom{
-    max-height: 52vh;
+    max-height: 34vh;
+    width: 100%;
     overflow-y: auto;
 }
 
@@ -1147,3 +1157,8 @@ hr{
     background: var(--default-color);
     z-index: 1;
 }
+
+.nav-bg{
+    background-color: color-mix(in srgb, var(--body-color), transparent 96%);
+}
+
